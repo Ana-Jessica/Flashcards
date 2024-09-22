@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcards Interativos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+      <div class="container">
+            <h1>Flashcards Interativos</h1>
+
+            <!-- Exibir Flashcards -->
+            <div class="flashcard-container">
+                  <div class="flashcard" id="flashcard">
+                        <div class="front">
+                              <p id="question">Pergunta</p>
+                            </div>
+                        <div class="back">
+                              <p id="answer">Resposta</p>
+                            </div>
+                      </div>
+                </div>
+
+            <!-- Controles de Navegação -->
+            <div class="controls">
+                  <button id="prev-card">Anterior</button>
+                  <button id="next-card">Próximo</button>
+                  <button id="flip-card">Virar Carta</button>
+                </div>
+
+            <!-- Controles de Sessão -->
+            <div class="session-controls">
+                  <button id="start-session">Iniciar Sessão</button>
+                  <button id="end-session">Finalizar Sessão</button>
+                  <p id="time-display">Tempo: 00:00</p>
+                </div>
+
+            <!-- Formulário para Adicionar Perguntas -->
+            <div class="add-card">
+                  <h2>Adicionar Pergunta</h2>
+                  <input type="text" id="new-question" placeholder="Digite a pergunta">
+                  <input type="text" id="new-answer" placeholder="Digite a resposta">
+                  <button id="add-card">Adicionar</button>
+                </div>
+
+            <!-- Exibir lista de cartões -->
+            <div class="card-list">
+                  <h2>Gerenciar Cartões</h2>
+                  <ul id="card-list"></ul>
+                </div>
+          </div>
+
+     
+    <script src="script.js"></script>
+</body>
+
+</html>
