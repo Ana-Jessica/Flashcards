@@ -1,126 +1,61 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
 .container {
-    text-align: center;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .flashcard-container {
-    perspective: 1000px;
+  position: relative;
+  width: 300px;
+  height: 200px;
+  margin: 20px auto;
+  perspective: 1000px;
 }
 
 .flashcard {
-    width: 300px;
-    height: 200px;
-    margin: 20px auto;
-    position: relative;
-    transform-style: preserve-3d;
-    transition: transform 0.6s;
-    cursor: pointer;
-    /* Indicador de que o cartão é clicável */
-}
-
-.flashcard div {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    background-color: white;
-}
-
-.front {
-    background-color: #f8f9fa;
-}
-
-.back {
-    transform: rotateY(180deg);
-    background-color: #007bff;
-    color: black;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
 }
 
 .flashcard.flipped {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
-.controls,
-.session-controls,
-.add-card {
-    margin-top: 20px;
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  backface-visibility: hidden;
 }
 
-.controls button,
-.session-controls button,
-#add-card {
-    padding: 10px 20px;
-    margin: 5px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
+.front {
+  background-color: #3498db;
+  color: white;
 }
 
-.controls button:hover,
-.session-controls button:hover,
-#add-card:hover {
-    background-color: #0056b3;
+.back {
+  background-color: #2ecc71;
+  color: white;
+  transform: rotateY(180deg);
 }
 
-#time-display {
-    margin-top: 10px;
-    font-size: 18px;
+.controls, .session-controls, .add-card {
+  margin: 10px 0;
 }
 
-.add-card input {
-    display: block;
-    margin: 10px auto;
-    padding: 10px;
-    width: 80%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+button {
+  padding: 10px 20px;
+  margin: 5px;
 }
 
 .card-list ul {
-    list-style: none;
-    padding: 10px;
-}
-
-.card-list li {
-    background-color: #f8f9fa;
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    display: flex;
-    justify-content: space-between;
-}
-
-.card-list button {
-    background-color: #ff4d4d;
-    border: none;
-    color: white;
-    padding: 5px;
-    cursor: pointer;
-    border-radius: 3px;
-}
-
-.card-list button:hover {
-    background-color: #cc0000;
+  list-style-type: none;
+  padding: 0;
 }
